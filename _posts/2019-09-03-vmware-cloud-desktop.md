@@ -17,27 +17,27 @@ title:  "使用 VMware 搭建自己的云桌面平台"
 
 安装好虚拟机之后，就可以安装虚拟机上的操作系统了。我们可以安装 Windows、Linux、macOS 等等。安装可以到不同网站下载安装镜像，例如如果想安装 CentOS 的话，可以到 [https://mirrors.tuna.tsinghua.edu.cn](https://mirrors.tuna.tsinghua.edu.cn) 高速下载。
 
-![tuna]({{ site.url }}/{{ site.baseurl }}/assets/images/tuna.png)
+![tuna]({{ site.url }}{{ site.baseurl }}/assets/images/tuna.png)
 
 下载好 ISO 之后，到虚拟机软件中新建虚拟机：
 
-![new-vm]({{ site.url }}/{{ site.baseurl }}/assets/images/new-vm.png)
+![new-vm]({{ site.url }}{{ site.baseurl }}/assets/images/new-vm.png)
 
 点下一步之后，选择刚刚下载的 ISO 文件：
 
-![select-iso]({{ site.url }}/{{ site.baseurl }}/assets/images/select-iso.png)
+![select-iso]({{ site.url }}{{ site.baseurl }}/assets/images/select-iso.png)
 
 选择一个足够大的地方存放自己的虚拟机硬盘：
 
-![name]({{ site.url }}/{{ site.baseurl }}/assets/images/name.png)
+![name]({{ site.url }}{{ site.baseurl }}/assets/images/name.png)
 
 然后指定硬盘的大小，需要注意的是，如果事先不指定好足够大的容量，后期扩容会很麻烦，建议预留充足的磁盘空间：
 
-![disk]({{ site.url }}/{{ site.baseurl }}/assets/images/disk.png)
+![disk]({{ site.url }}{{ site.baseurl }}/assets/images/disk.png)
 
 最后确认配置无误后，点击创建创建虚拟机：
 
-![create]({{ site.url }}/{{ site.baseurl }}/assets/images/create.png)
+![create]({{ site.url }}{{ site.baseurl }}/assets/images/create.png)
 
 之后按照不同操作系统的安装指南进行安装即可。
 
@@ -45,21 +45,21 @@ title:  "使用 VMware 搭建自己的云桌面平台"
 
 在虚拟机设置中，确认有网络适配器是 NAT 模式，否则虚拟机无法上网。
 
-![vm-settings]({{ site.url }}/{{ site.baseurl }}/assets/images/vm-settings.png)
+![vm-settings]({{ site.url }}{{ site.baseurl }}/assets/images/vm-settings.png)
 
 在 VMware Workstation 的“编辑”菜单中选择“虚拟网络编辑器”：
 
-![vnetwork]({{ site.url }}/{{ site.baseurl }}/assets/images/vnetwork.png)
+![vnetwork]({{ site.url }}{{ site.baseurl }}/assets/images/vnetwork.png)
 
 检查 NAT 网卡连接到了主机上。
 
 进入操作系统，尝试连接外网，并查看网卡的 IP：
 
-![centos7]({{ site.url }}/{{ site.baseurl }}/assets/images/centos7.png)
+![centos7]({{ site.url }}{{ site.baseurl }}/assets/images/centos7.png)
 
 在宿主机上使用 SSH 尝试连接：
 
-![ssh]({{ site.url }}/{{ site.baseurl }}/assets/images/ssh.png)
+![ssh]({{ site.url }}{{ site.baseurl }}/assets/images/ssh.png)
 
 可以看到虚拟机既能连接外网，又可以和宿主机通信。
 
@@ -67,26 +67,26 @@ title:  "使用 VMware 搭建自己的云桌面平台"
 
 在虚拟机设置中，开启虚拟机的 VNC 连接，如果想安全一些，可以启用 VNC 连接密码：
 
-![vnc]({{ site.url }}/{{ site.baseurl }}/assets/images/vnc.png)
+![vnc]({{ site.url }}{{ site.baseurl }}/assets/images/vnc.png)
 
 设置好之后，其他人就可以通过你电脑的 IP 地址来访问你创建的虚拟机了。
 
 到网络和共享中心查看自己的网卡 IP：
 
-![ip]({{ site.url }}/{{ site.baseurl }}/assets/images/ip.png)
+![ip]({{ site.url }}{{ site.baseurl }}/assets/images/ip.png)
 
 然后让想使用云桌面的用户下载 [RealVNC 客户端](https://www.realvnc.com/en/connect/download/viewer/)。安装好之后使用你电脑的 IP 地址和端口号连接虚拟机：
 
-![vnc-connect]({{ site.url }}/{{ site.baseurl }}/assets/images/vnc-connect.png)
+![vnc-connect]({{ site.url }}{{ site.baseurl }}/assets/images/vnc-connect.png)
 
 看到操作系统界面之后就宣布大功告成啦！只要你的电脑和虚拟机一直运行着，别人就可以一直使用你的云桌面服务。是不是觉得云计算也没有那么神秘呢？
 
-![vnc-centos]({{ site.url }}/{{ site.baseurl }}/assets/images/vnc-centos.png)
+![vnc-centos]({{ site.url }}{{ site.baseurl }}/assets/images/vnc-centos.png)
 
 当然，你还可以安装其他的操作系统，只要你的电脑足够强大，就可以同时为许多人提供云桌面服务！
 
-![macos]({{ site.url }}/{{ site.baseurl }}/assets/images/macos.png)
+![macos]({{ site.url }}{{ site.baseurl }}/assets/images/macos.png)
 
-![xp]({{ site.url }}/{{ site.baseurl }}/assets/images/xp.png)
+![xp]({{ site.url }}{{ site.baseurl }}/assets/images/xp.png)
 
-![win98]({{ site.url }}/{{ site.baseurl }}/assets/images/win98.png)
+![win98]({{ site.url }}{{ site.baseurl }}/assets/images/win98.png)
