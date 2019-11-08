@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>cloudgo-io</title>
+</head>
+<body>
+    <img src="images/gopher.jpg" alt="">
+    <h1>People</h1>
+    <h2>Login</h2>
+    <form action="/login" method="post">
+        <label for="username">Username: </label><input type="text" name="username" id="username" />
+        <label for="password">Password: </label><input type="password" name="password" id="password" />
+        <input type="submit" value="Login" />
+    </form>
+    <h2>New Person</h2>
+    <form name="person" id="person" onsubmit="return false;">
+        <label for="name">Name: </label><input type="text" name="name" id="name" />
+        <label for="age">Age: </label><input type="number" name="age" id="age" />
+        <input type="button" value="Submit" onclick="addPerson()"/>
+    </form>
+    <br>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Age</td>
+                <td>Name</td>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+</body>
+<script src="js/data.js"></script>
+</html>
